@@ -1,5 +1,5 @@
 <template >
-    <section class="container p-5">
+    <section class="container pt-5">
       <div class="row ">
         <singleCardFilm v-for="card in cardList" :key="card.id" :card="card"/>
 
