@@ -2,7 +2,7 @@
 
   <header class="bg-black">
     <section class="d-flex  justify-content-between align-items-center container pt-3 pb-3 ">
-    <div class="text-uppercase text-danger">boolfix</div>
+    <div class="text-uppercase text-danger">boolflix</div>
     <div class="input-group w-25">
       <button
         class="btn btn-outline-secondary"
