@@ -15,7 +15,7 @@ export default {
     data() {
         return {
             cardList:[],
-            apiUrl: 'https://api.themoviedb.org/3/search/movie?api_key=03577983b6885d7b8f4dfcc7600081db&query=ritorno+al+futuro'
+            apiUrl: 'https://api.themoviedb.org/3/search/movie?api_key=03577983b6885d7b8f4dfcc7600081db&query=batman'
         }
     },
 

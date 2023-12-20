@@ -17,6 +17,7 @@
         placeholder=""
         aria-label="Example text with button addon"
         aria-describedby="button-addon1"
+        v-model="store.searchText"
       />
     </div>
   </section>
@@ -24,8 +25,15 @@
 </template>
 
 <script>
+import { store } from '../js/store';
+
 export default {
-    name:'AppHeader'
+    name:'AppHeader',
+    data() {
+        return {
+            store,
+        }
+    },
 };
 </script>
 

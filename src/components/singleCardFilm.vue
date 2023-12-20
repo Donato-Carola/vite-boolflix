@@ -5,7 +5,7 @@
             {{card.original_title}}
         </h3>-->
         <img class="w-100" :src="'https://image.tmdb.org/t/p/w500' + card.backdrop_path" alt="">
-        <div class="info p-2">
+        <div class="info p-2 ">
         <h5>Titolo:{{card.title}}</h5>
         <h5>Titolo Originale:{{card.original_title}}</h5>
         <h5>Voto:{{card.vote_average}}</h5>
@@ -40,6 +40,8 @@ export default {
   }
   article:hover div.info{
     display: inline-block;
+    background-color: black;
+    color: white;
     
   }
 
