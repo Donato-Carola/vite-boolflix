@@ -8,8 +8,14 @@
     
 </template>
 <script>
+import { store } from '../js/store';
 import CardsWrapper from './CardsWrapper.vue';
 export default {
+    data() {
+        return {
+            store
+        }
+    },
     name:'AppMain',
     components:{
         CardsWrapper,

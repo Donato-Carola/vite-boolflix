@@ -4,23 +4,29 @@
        <!-- <h3>
             {{card.original_title}}
         </h3>-->
-        <img class="w-100" :src="'https://image.tmdb.org/t/p/w500' + card.backdrop_path" alt="">
+        <img class="w-100" :src="'https://image.tmdb.org/t/p/w500' + store.backdrop_path" alt="">
         <div class="info p-2 ">
-        <h5>Titolo:{{card.title}}</h5>
-        <h5>Titolo Originale:{{card.original_title}}</h5>
-        <h5>Voto:{{card.vote_average}}</h5>
-        <p>Overview: {{card.overview}}</p>
+        <h5>Titolo:{{store.title}}</h5>
+        <h5>Titolo Originale:{{store.original_title}}</h5>
+        <h5>Voto:{{store.vote_average}}</h5>
+        <p>Overview: {{store.overview}}</p>
         </div>
     </article>
 </template>
 <script>
+import { store } from '../js/store';
 export default {
-    props:{
+    data() {
+        return {
+            store,
+        }
+    },
+   /* props:{
            card : {
             type: Object,
             required: true,
            }
-    }
+    }*/
 }
 </script>
 <style lang="scss" scoped>

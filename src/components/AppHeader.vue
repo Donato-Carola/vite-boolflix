@@ -8,6 +8,7 @@
         class="btn btn-outline-secondary"
         type="button"
         id="button-addon1"
+        @click="store.getCards(searchText)"
       >
         Button
       </button>
@@ -17,7 +18,8 @@
         placeholder=""
         aria-label="Example text with button addon"
         aria-describedby="button-addon1"
-        v-model="store.searchText"
+       v-model="searchText"
+       @keyup.enter="store.getCards(searchText)"
       />
     </div>
   </section>
@@ -26,12 +28,14 @@
 
 <script>
 import { store } from '../js/store';
+import axios from 'axios';
 
 export default {
     name:'AppHeader',
     data() {
         return {
             store,
+            searchText:'',
         }
     },
 };
