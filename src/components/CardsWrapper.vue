@@ -1,6 +1,8 @@
 <template >
     <section class="container pt-5">
+      <h1 class=" text-center pt-5 pb-5">Scegli il tuo Film preferito</h1>
       <div class="row ">
+
         <singleCardFilm v-for="card in store.cardList" :key="card.id" :card="card"/>
 
       </div>
@@ -35,5 +37,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+
+section{
+  height: 100vh;
+  overflow-y: auto;
+}
     
 </style>

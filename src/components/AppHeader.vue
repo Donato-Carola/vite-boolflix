@@ -3,7 +3,7 @@
   <header class="bg-black">
     <section class="d-flex  justify-content-between align-items-center container pt-3 pb-3 ">
     <div class="text-uppercase text-danger">boolflix</div>
-    <div class="input-group w-25">
+    <div class="input-group w-50">
       <button
         class="btn btn-outline-secondary"
         type="button"
@@ -15,7 +15,7 @@
       <input
         type="text"
         class="form-control"
-        placeholder=""
+        placeholder="Scrivi qui il tuo film preferito"
         aria-label="Example text with button addon"
         aria-describedby="button-addon1"
        v-model="searchText"
