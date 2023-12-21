@@ -4,7 +4,7 @@
        <!-- <h3>
             {{card.original_title}}
         </h3>-->
-        <img class="w-100" :src="'https://image.tmdb.org/t/p/w500' + card.backdrop_path" alt="">
+        <img class="w-100" :src="card.backdrop_path ? 'https://image.tmdb.org/t/p/w500' + card.backdrop_path : '../assets/img/imagenotfound.jpg'" alt="">
         <div class="info p-2 ">
             <h5>TIPO: {{card.media_type}}</h5>   
         <h5>Titolo: {{card.title}}</h5>
@@ -31,7 +31,9 @@ export default {
       const roundedRating = Math.ceil(rating / 2); // Trasforma da 1-10 a 1-5                  
       return Array.from({ length: 5 }, (_, index) => index < roundedRating ? '★' : '☆').join('');      /*Crea un array con una lunghezza di 5 elementi. con una funzione di callback formata dalvalore _ e il parametro che è index  */
     }                                                                                                   /*a questo punto nella funzione di callback facciamo la nostra espressione ternaria*/ 
-  }                                                                                                     /*join ci da la possibilità di unire i singoli elementi dell'array in una singola stringa*/
+  },             /*join ci da la possibilità di unire i singoli elementi dell'array in una singola stringa*/
+  
+                                                                                          
 }
 </script>
 <style lang="scss" scoped>
