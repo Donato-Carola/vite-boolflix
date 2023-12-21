@@ -6,9 +6,10 @@
         </h3>-->
         <img class="w-100" :src="'https://image.tmdb.org/t/p/w500' + card.backdrop_path" alt="">
         <div class="info p-2 ">
-        <h5>Titolo:{{card.title}}</h5>
-        <h5>Titolo Originale:{{card.original_title}}</h5>
-        <h5>Voto:{{card.vote_average}}</h5>
+            <h5>TIPO: {{card.media_type}}</h5>   
+        <h5>Titolo: {{card.title}}</h5>
+        <h5>Titolo Originale: {{card.original_title}}</h5>
+        <h5>Voto: {{card.vote_average}}</h5>
         <p>Overview: {{card.overview}}</p>
         </div>
     </article>
