@@ -14,8 +14,10 @@
     />
     <div class="info p-2">
       <h5>TIPO: {{ card.media_type }}</h5>
-      <h5>Titolo: {{ card.title }}</h5>
-      <h5>Titolo Originale: {{ card.original_title }}</h5>
+      <h5 v-if="card.media_type === 'movie'">Titolo: {{ card.title }}</h5>
+      <h5 v-else="card.media_type === 'tv'">Titolo: {{ card.name }}</h5>
+      <h5 v-if="card.media_type === 'movie'">Titolo Originale: {{ card.original_title }}</h5>
+      <h5 v-else="card.media_type === 'tv'">Titolo Originale: {{ card.original_name }}</h5>
       <h5>Voto: {{ card.vote_average }}</h5>
       <p>Overview: {{ card.overview }}</p>
       <div class="star-rating">
