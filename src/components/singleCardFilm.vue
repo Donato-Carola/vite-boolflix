@@ -4,7 +4,7 @@
             {{card.original_title}}
         </h3>-->
     <img
-      class="w-100"
+      class="w-100 principalImg"
       :src="
         card.backdrop_path
           ? 'https://image.tmdb.org/t/p/w500' + card.backdrop_path
@@ -24,18 +24,42 @@
         voto:
         {{ getStarRating(card.vote_average) }}
       </div>
+      <div>
+        language:
+      <img class="iconLanguage"
+      v-if="languageFlags[card.original_language]" 
+      :src="languageFlags[card.original_language]" 
+      alt="Flag" 
+    />
+  </div>
     </div>
   </article>
 </template>
 <script>
 import { store } from "../js/store";
 export default {
+data() {
+  return {
+    languageFlags: {
+        "en": '/img/iconen.png',
+        "es": '/img/icons8-spain-48.png',
+        "it": '/img/icons8-italy-48.png',
+        "de": '/img/icons8-germany-48.png',
+        "zh": '/img/icons8-china-48.png',
+        "fr": '/img/icons8-france-48.png',
+    }
+  }
+},
+
+
+
   props: {
     card: {
       type: Object,
       required: true,
     },
   },
+  
   methods: {
     getStarRating(rating) {
       /*funzione che prende il valore da card.vote_average (valore del voto nel nostro API ) lo traforma da 1 a 5 intero*/
@@ -67,7 +91,15 @@ article:hover div.info {
 
 }
 
-article:hover img {
+article:hover img.principalImg {
   display: none;
+}
+
+
+
+img.iconLanguage{
+ object-fit: cover;
+ width: 20px;
+ height: 20px;
 }
 </style>
